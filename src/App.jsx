@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Dashboard from "./components/Dashboard";
 function App() {
   const [users, setUsers] = useState([]);
   useEffect(() => {
@@ -7,8 +8,9 @@ function App() {
     .then(data => setUsers(data));
   }, []);
   return (
+    <div>
+      <Dashboard />
     <div className="users-container">
-      <h1>Dashboard</h1>
       <div className="users-container">
         {users.map(user => (
           <div className="user-card"
@@ -17,6 +19,7 @@ function App() {
       <p>{user.email}</p>
       </div>
         ))}
+      </div>
       </div>
       </div>
   );
