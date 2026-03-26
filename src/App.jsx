@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Sidebar from "./components/Sidebar";
 import Dashboard from "./components/Dashboard";
 function App() {
   const [users, setUsers] = useState([]);
@@ -8,7 +9,8 @@ function App() {
     .then(data => setUsers(data));
   }, []);
   return (
-    <div>
+    <div style={{ display: "flex" }}>
+      <Sidebar />
       <Dashboard />
     <div className="users-container">
       <div className="users-container">

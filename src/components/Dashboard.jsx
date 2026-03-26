@@ -8,12 +8,16 @@ function Dashboard() {
     ];
     return (
         <div className="dashboard">
+            <div style={{ padding: "20px", width: "100%" }}>
             <h1>Dashboard</h1>
+            <div style={{ display: "flex", gap: "20px", 
+                marginBotton: "30px" }}>
             {cards.map((item, index) => (
                 <Card key={index} titlle={item}
                 />
             ))}
-            <p>Welcome To My dashboard</p>
+            </div>
+            </div>
             </div>
     );
 }
