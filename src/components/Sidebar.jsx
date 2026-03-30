@@ -1,16 +1,13 @@
+import { NavLink } from "react-router-dom";
 function Sidebar() {
     return (
-        <div style={{
-            width: "200px",
-            background: "#111",
-            color: "white",
-            height: "100vh",
-            padding: "20"
-        }}>
+        <div>
             <h2>Menu</h2>
-            <p>Dashboard</p>
-            <p>Settings</p>
-            </div>
+            <ul>
+                <li><NavLink to="/">Dashboard</NavLink></li>
+                <li><NavLink to="/users">Users</NavLink></li>
+                </ul>
+                </div>
     );
 }
 export default Sidebar;

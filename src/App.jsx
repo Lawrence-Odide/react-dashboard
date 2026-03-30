@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./components/Dashboard";
+import { Routes, Route } from "react-router-dom";
+import Settings from "./pages/Settings";
+import Users from "./pages/Users";
 function App() {
   const [users, setUsers] = useState([]);
   useEffect(() => {
@@ -11,19 +14,14 @@ function App() {
   return (
     <div style={{ display: "flex" }}>
       <Sidebar />
-      <Dashboard />
-    <div className="users-container">
-      <div className="users-container">
-        {users.map(user => (
-          <div className="user-card"
-       key={user.id}>
-      <h3>{user.name}</h3>
-      <p>{user.email}</p>
-      </div>
-        ))}
+    <div style={{ flex: 1, padding: "20px" }}>
+      <Routes>
+     <Route path="/" element={<Dashboard />} />
+    <Route path="/settings" element={<Settings />} />
+    <Route path="/users" element={<Users />} />
+      </Routes>
       </div>
       </div>
-      </div>
-  );
-}
+      );
+      }
 export default App;

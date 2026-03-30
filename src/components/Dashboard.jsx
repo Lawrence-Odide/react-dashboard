@@ -13,7 +13,7 @@ function Dashboard() {
             <div style={{ display: "flex", gap: "20px", 
                 marginBotton: "30px" }}>
             {cards.map((item, index) => (
-                <Card key={index} titlle={item}
+                <Card key={index} title={item}
                 />
             ))}
             </div>
