@@ -1,11 +1,13 @@
 function Card({ title }) {
     return (
         <div style={{
-            background: "blue",
+            background: "#2563eb",
             color: "white",
-            padding: "20px",
-            margin: "10px",
-            borderRadius: "8px"
+            padding: "30px",
+            borderRadius: "8px",
+            minWidth: "120px",
+            textAlign: "center",
+            fontWeight: "bold"
         }}>
             <h3>{title}</h3>
             </div>
