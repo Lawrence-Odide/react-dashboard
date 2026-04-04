@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Sidebar from "./components/Sidebar";
 import { Routes, Route } from "react-router-dom";
 import Card from "./components/Card";
+import Layout from "./layouts/Layout";
 import Settings from "./pages/Settings";
 import Users from "./pages/Users";
 import Dashboard from "./pages/Dashboard";
@@ -16,13 +17,11 @@ function App() {
     <div style={{ display: "flex" }}>
       <Sidebar />
       <div style={{ padding: "20px", flex: 1 }}>
-    <div style={{ flex: 1, padding: "20px" }}>
       <Routes>
      <Route path="/" element={<Dashboard />} />
     <Route path="/settings" element={<Settings />} />
     <Route path="/users" element={<Users users={users} />} />
       </Routes>
-      </div>
       </div>
       </div>
       );
